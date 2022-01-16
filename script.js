@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 // create object.
 
 const restuarent = {
@@ -43,7 +43,7 @@ restuarent.orderDelivery({
   mainIndex: 2,
 });
 
-/*
+
 // Array Destructuring
 
 const arr = [1, 2, 3];
@@ -122,3 +122,49 @@ const {
 } = restuarent.openingHours;
 console.log(open);
 */
+
+const restuarent = {
+  name: "Italian Classico",
+  location: "Via Angelo Tavani 23, Firenze, Italy",
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
+  openingHours: {
+    thu: {
+      open: 10,
+      close: 22,
+    },
+    fri: {
+      open: 6,
+      close: 16,
+    },
+    sat: {
+      open: 8,
+      close: 18,
+    },
+  },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderDelivery: function ({ time, address, starterIndex, mainIndex }) {
+    console.log(
+      `Order Recived ${time} for ${address} ordered in starter ${this.starterMenu[starterIndex]} and main course ${this.mainMenu[mainIndex]}`
+    );
+  },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is the order for pasta with ingredients ${ing1}, ${ing2}, ${ing3}`
+    );
+  },
+};
+
+const ingredient = [
+  prompt("what is ingredient1 you want for pasta"),
+  prompt("what is ingredient2"),
+  prompt("what is ingredient3"),
+];
+
+restuarent.orderPasta(...ingredient);
