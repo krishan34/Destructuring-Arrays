@@ -1,5 +1,5 @@
 "use strict";
-/*
+
 // create object.
 
 const restuarent = {
@@ -32,8 +32,14 @@ const restuarent = {
       `Order Recived ${time} for ${address} ordered in starter ${this.starterMenu[starterIndex]} and main course ${this.mainMenu[mainIndex]}`
     );
   },
-};
 
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is the order for pasta with ingredients ${ing1}, ${ing2}, ${ing3}`
+    );
+  },
+};
+/*
 // Calling object funtion.
 
 restuarent.orderDelivery({
@@ -121,50 +127,23 @@ const {
   thu: { open },
 } = restuarent.openingHours;
 console.log(open);
+
+// const ingredient = [
+//   // prompt("what is ingredient1 you want for pasta"),
+//   // prompt("what is ingredient2"),
+//   // prompt("what is ingredient3"),
+// ];
+
+// restuarent.orderPasta(...ingredient);
 */
+// rest operators
 
-const restuarent = {
-  name: "Italian Classico",
-  location: "Via Angelo Tavani 23, Firenze, Italy",
-  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
-  openingHours: {
-    thu: {
-      open: 10,
-      close: 22,
-    },
-    fri: {
-      open: 6,
-      close: 16,
-    },
-    sat: {
-      open: 8,
-      close: 18,
-    },
-  },
-
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
-
-  orderDelivery: function ({ time, address, starterIndex, mainIndex }) {
-    console.log(
-      `Order Recived ${time} for ${address} ordered in starter ${this.starterMenu[starterIndex]} and main course ${this.mainMenu[mainIndex]}`
-    );
-  },
-
-  orderPasta: function (ing1, ing2, ing3) {
-    console.log(
-      `Here is the order for pasta with ingredients ${ing1}, ${ing2}, ${ing3}`
-    );
-  },
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
 };
 
-const ingredient = [
-  prompt("what is ingredient1 you want for pasta"),
-  prompt("what is ingredient2"),
-  prompt("what is ingredient3"),
-];
-
-restuarent.orderPasta(...ingredient);
+add(2, 3);
+add(4, 5, 7);
+add(3, 4, 5, 6, 1, 2, 7);
