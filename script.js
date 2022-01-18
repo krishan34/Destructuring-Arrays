@@ -1,5 +1,6 @@
 "use strict";
 
+/*
 // create object.
 
 const restuarent = {
@@ -39,7 +40,7 @@ const restuarent = {
     );
   },
 };
-/*
+
 // Calling object funtion.
 
 restuarent.orderDelivery({
