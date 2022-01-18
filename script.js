@@ -1,6 +1,5 @@
 "use strict";
 
-/*
 // create object.
 
 const restuarent = {
@@ -39,6 +38,11 @@ const restuarent = {
       `Here is the order for pasta with ingredients ${ing1}, ${ing2}, ${ing3}`
     );
   },
+
+  orderPizza: function (mainIng, ...optionIng) {
+    console.log(mainIng);
+    console.log(optionIng);
+  },
 };
 
 // Calling object funtion.
@@ -50,7 +54,16 @@ restuarent.orderDelivery({
   mainIndex: 2,
 });
 
+restuarent.orderPizza("mushroom", "onion", "olive", "spinach", "tomato");
 
+const ingredient = [
+  prompt("what is ingredient1 you want for pasta"),
+  prompt("what is ingredient2"),
+  prompt("what is ingredient3"),
+];
+
+restuarent.orderPasta(...ingredient);
+/*
 // Array Destructuring
 
 const arr = [1, 2, 3];
@@ -129,13 +142,6 @@ const {
 } = restuarent.openingHours;
 console.log(open);
 
-// const ingredient = [
-//   // prompt("what is ingredient1 you want for pasta"),
-//   // prompt("what is ingredient2"),
-//   // prompt("what is ingredient3"),
-// ];
-
-// restuarent.orderPasta(...ingredient);
 */
 // rest operators
 
@@ -148,3 +154,8 @@ const add = function (...numbers) {
 add(2, 3);
 add(4, 5, 7);
 add(3, 4, 5, 6, 1, 2, 7);
+
+// using spread operator
+
+const x = [23, 6, 9];
+add(...x);
