@@ -44,7 +44,7 @@ const restuarent = {
     console.log(optionIng);
   },
 };
-
+/*
 // Calling object funtion.
 
 restuarent.orderDelivery({
@@ -53,7 +53,7 @@ restuarent.orderDelivery({
   starterIndex: 2,
   mainIndex: 2,
 });
-/*
+
 restuarent.orderPizza("mushroom", "onion", "olive", "spinach", "tomato");
 
 const ingredient = [
@@ -159,7 +159,7 @@ add(3, 4, 5, 6, 1, 2, 7);
 
 const x = [23, 6, 9];
 add(...x);
-*/
+
 // spread opreator used for unpacking values.
 
 const arr = [1, 2, 3, 4, 5];
@@ -170,5 +170,29 @@ console.log(newArr);
 
 const [a, b, ...others] = newArr;
 console.log(a, b, others);
+*/
+// How to add same variable in all the objects.
+// short ciructing
 
-How to add variable in all
+const rest1 = {
+  name: "sam",
+  numguest: 20,
+};
+
+const rest2 = {
+  name: "ten",
+};
+
+const rest3 = {
+  name: "ram",
+};
+
+const rest4 = {
+  name: "jam",
+  numguest: 5,
+};
+
+const rest =
+  rest1.numguest || rest2.numguest || rest3.numguest || rest4.numguest || 10;
+
+console.log(rest);
