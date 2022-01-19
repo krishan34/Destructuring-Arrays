@@ -53,7 +53,7 @@ restuarent.orderDelivery({
   starterIndex: 2,
   mainIndex: 2,
 });
-
+/*
 restuarent.orderPizza("mushroom", "onion", "olive", "spinach", "tomato");
 
 const ingredient = [
@@ -63,7 +63,7 @@ const ingredient = [
 ];
 
 restuarent.orderPasta(...ingredient);
-/*
+
 // Array Destructuring
 
 const arr = [1, 2, 3];
@@ -142,7 +142,7 @@ const {
 } = restuarent.openingHours;
 console.log(open);
 
-*/
+
 // rest operators
 
 const add = function (...numbers) {
@@ -159,3 +159,16 @@ add(3, 4, 5, 6, 1, 2, 7);
 
 const x = [23, 6, 9];
 add(...x);
+*/
+// spread opreator used for unpacking values.
+
+const arr = [1, 2, 3, 4, 5];
+const newArr = [...arr, 6, 7];
+console.log(newArr);
+
+// Rest operator used for unpakcing variables
+
+const [a, b, ...others] = newArr;
+console.log(a, b, others);
+
+How to add variable in all
