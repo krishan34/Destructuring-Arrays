@@ -18,7 +18,7 @@ const restuarent = {
       close: 16,
     },
     sat: {
-      open: 8,
+      open: 0,
       close: 18,
     },
   },
@@ -170,7 +170,7 @@ console.log(newArr);
 
 const [a, b, ...others] = newArr;
 console.log(a, b, others);
-*/
+
 // How to add same variable in all the objects.
 // short ciructing
 
@@ -196,3 +196,24 @@ const rest =
   rest1.numguest || rest2.numguest || rest3.numguest || rest4.numguest || 10;
 
 console.log(rest);
+
+
+
+// Desturction array with for of loop
+
+const arr = [1, 2, 3, 4];
+for (const value of arr) console.log(value);
+
+// get index ofcurrent element.
+
+for (const value1 of arr.entries()) console.log(value1);
+*/
+// Optional chaining
+
+const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+for (const day of days) {
+  // Way to use variable in an object and set default value using or object
+  const open = restuarent.openingHours[day]?.open ?? "Closed Today";
+  console.log(`On ${day} opned at this hours ${open}`);
+}
