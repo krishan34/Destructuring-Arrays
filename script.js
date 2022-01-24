@@ -207,7 +207,7 @@ for (const value of arr) console.log(value);
 // get index ofcurrent element.
 
 for (const value1 of arr.entries()) console.log(value1);
-*/
+
 // Optional chaining
 
 const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
@@ -217,3 +217,32 @@ for (const day of days) {
   const open = restuarent.openingHours[day]?.open ?? "Closed Today";
   console.log(`On ${day} opned at this hours ${open}`);
 }
+
+// Optional chaining with methods
+
+console.log(restuarent.order?.(0, 1) ?? "Method doesn't exist");
+
+console.log(restuarent.or?.(0, 1) ?? "Method doesn't exist");
+
+// optional chaining with arrays
+
+console.log(restuarent?.starterMenu[2] ?? "Element doesnt exist");
+*/
+// Looping over objects with property Names.
+
+const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+const properties = Object.keys(restuarent.openingHours);
+let opeStr = `we are open on ${properties.length} day: `;
+for (const day of properties) {
+  console.log(day);
+  opeStr += `${day}, `;
+}
+
+console.log(opeStr);
+
+// Looping over objects with property Values.
+
+const values = Object.values(restuarent.openingHours);
+
+console.log(values);
