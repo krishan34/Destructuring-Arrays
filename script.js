@@ -227,7 +227,7 @@ console.log(restuarent.or?.(0, 1) ?? "Method doesn't exist");
 // optional chaining with arrays
 
 console.log(restuarent?.starterMenu[2] ?? "Element doesnt exist");
-*/
+
 // Looping over objects with property Names.
 
 const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
@@ -246,3 +246,70 @@ console.log(opeStr);
 const values = Object.values(restuarent.openingHours);
 
 console.log(values);
+
+
+// Set Unique
+
+const orderSet = new Set([
+  "pizza",
+  "pasta",
+  "pasta",
+  "rossito",
+  "garlic bread",
+  "pasta",
+]);
+
+console.log(orderSet);
+// how to find value exists in the set or not
+
+console.log(orderSet.has("pizza"));
+console.log(orderSet.has("momo"));
+
+// add a value in the set.
+
+orderSet.add("momo");
+
+// delete a value from the set.
+
+orderSet.delete("pizza");
+console.log(orderSet);
+
+// Looping set.
+
+for (const order of orderSet) console.log(order);
+
+// converting set into an array
+
+const staff = ["waiter", "chef", "waiter", "manager"];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+// How to know the unique value size.
+
+const uniqueStaffValue = new Set(["waiter", "chef", "waiter", "manager"]).size;
+console.log(uniqueStaffValue);
+
+// Count the characters in the string.
+
+const characterCount = new Set("krishanchikara").size;
+console.log(characterCount);
+
+*/
+
+// MAP Fundamental
+// how to create map
+// always try to create empty map
+const rest = new Map();
+
+// use set method to insert values in the map.
+
+rest.set("Name", "classico").set(1, "Frenzi, Italy").set(2, "Frenzi, Portugal");
+
+rest.set("open", 11).set(true, "we are open :D");
+
+console.log(rest);
+
+// getvalues from map using key.
+
+const getValues = [rest.get("Name"), rest.get(1), rest.get(true)];
+for (const x of getValues) console.log(x);
