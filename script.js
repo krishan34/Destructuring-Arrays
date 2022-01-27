@@ -326,3 +326,34 @@ console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
 */
 
 //  Map Iteration
+const question = new Map([
+  ["question", "What is best programming language in the world"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "JavaScript"],
+  ["correct", 3],
+  [true, "Correct 🎉🎉"],
+  [false, "Try Again 😔😔"],
+]);
+
+console.log(question);
+
+// HOw to convert object to Map
+
+const hoursMap = new Map(Object.entries(restuarent.openingHours));
+console.log(hoursMap);
+
+// quiz App
+console.log(question.get("question"));
+for (const [key, value] of question) {
+  if (typeof key === "number") console.log(`Answer ${key}:${value}`);
+}
+// convertingstring to number
+const answer = Number(prompt(`your Answer`));
+console.log(answer);
+
+console.log(question.get(question.get("correct") === answer));
+
+// convertback to array.
+
+console.log(...question);
