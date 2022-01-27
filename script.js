@@ -357,3 +357,5 @@ console.log(question.get(question.get("correct") === answer));
 // convertback to array.
 
 console.log(...question);
+console.log([...question.key]);
+console.log([...question.values]);
