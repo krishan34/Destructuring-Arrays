@@ -294,7 +294,7 @@ console.log(uniqueStaffValue);
 const characterCount = new Set("krishanchikara").size;
 console.log(characterCount);
 
-*/
+
 
 // MAP Fundamental
 // how to create map
@@ -305,7 +305,11 @@ const rest = new Map();
 
 rest.set("Name", "classico").set(1, "Frenzi, Italy").set(2, "Frenzi, Portugal");
 
-rest.set("open", 11).set(true, "we are open :D");
+rest
+  .set("open", 11)
+  .set("close", 23)
+  .set(true, "we are open :D")
+  .set(false, "we are closed :(");
 
 console.log(rest);
 
@@ -313,3 +317,12 @@ console.log(rest);
 
 const getValues = [rest.get("Name"), rest.get(1), rest.get(true)];
 for (const x of getValues) console.log(x);
+
+// Get time
+
+const time = 0;
+console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
+
+*/
+
+//  Map Iteration
