@@ -323,7 +323,7 @@ for (const x of getValues) console.log(x);
 const time = 0;
 console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
 
-*/
+
 
 //  Map Iteration
 const question = new Map([
@@ -359,3 +359,77 @@ console.log(question.get(question.get("correct") === answer));
 console.log(...question);
 console.log([...question.key]);
 console.log([...question.values]);
+
+
+// working with strings.
+
+const checkMiddleSeat = function (seat) {
+  const s = seat.slice(-1);
+  if (s === "B" || s === "E") {
+    console.log(`Seat Number ${seat}: is Middle row seat`);
+  } else {
+    console.log(`Seat Number ${seat}: is not Middle row seat`);
+  }
+};
+
+checkMiddleSeat("11B");
+checkMiddleSeat("43A");
+checkMiddleSeat("04D");
+checkMiddleSeat("12F");
+checkMiddleSeat("15E");
+
+// change text to upper and lower cases
+
+const str = "What IS your LIFE Tell you AboUt";
+
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+
+// Fix captalization
+
+const passengerName = "kriShan";
+const passengerLowerName = passengerName.toLowerCase();
+const passengerCorrect =
+  passengerLowerName[0].toUpperCase() + passengerLowerName.slice(1);
+console.log(passengerCorrect);
+
+// function Name to correct wrong spelling.
+
+const correctName = function (name) {
+  const n = name.toLowerCase();
+  n[0].toUpperCase() + n.slice(1);
+  console.log(n);
+};
+
+correctName("jack");
+correctName("JOHN");
+*/
+// comparing email
+
+const email = "krishan.chikara@aol.com";
+const loginEmail = "    KRISHAN.CHIKARA@AOL.COM  ";
+
+const lowerCaseEmail = loginEmail.toLowerCase();
+
+const compareEmail = function (login) {
+  const loginEmail = login.toLowerCase().trim();
+  console.log(loginEmail);
+  if (email === loginEmail) {
+    console.log("logged successfully");
+  } else {
+    console.log("details doesn't match");
+  }
+};
+
+compareEmail("    KRISHAN.CHIKARA@AOL.COM  \n");
+compareEmail("time@aol.in");
+
+// Replace Method
+
+const text =
+  "Since these methods are global, and global the object is the browser window, these methods are actually window methods";
+
+const w = text.replace("window", "bracket");
+const u = w.replaceAll("methods", "functions");
+
+console.log(u);
