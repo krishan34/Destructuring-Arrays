@@ -403,7 +403,7 @@ const correctName = function (name) {
 
 correctName("jack");
 correctName("JOHN");
-*/
+
 // comparing email
 
 const email = "krishan.chikara@aol.com";
@@ -433,3 +433,54 @@ const w = text.replace("window", "bracket");
 const u = w.replaceAll("methods", "functions");
 
 console.log(u);
+
+// Spilt Strings
+
+const text =
+  "Since these methods are global, and global the object is the browser window, these methods are actually window methods";
+
+const x = text.split(" ");
+console.log(x);
+
+// Join Strings
+
+const sp = text.split(",");
+console.log(sp);
+
+const sj = sp.join(",");
+console.log(sj);
+
+// Funtion First letter capialt in name
+
+const captalizationName = function (name) {
+  const names = name.split(" ");
+  const namesUpper = [];
+
+  for (const n of names) {
+    //namesUpper.push(n[0].toUpperCase() + n.slice(1));
+
+    // replace with uppercase
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(" "));
+};
+
+captalizationName("jessica ann smith davis");
+captalizationName("krishan chikara");
+
+// Padding
+
+const message = "time to live";
+console.log(message.padStart(20, "+"));
+console.log(message.padEnd(20, "+"));
+
+// function to add
+
+const maskCredit = function (number) {
+  const numb = number + "";
+  const last = numb.slice(-4);
+  return last.padStart(numb.length, "X");
+};
+
+console.log(maskCredit(123456789341));
+*/
